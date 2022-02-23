@@ -1,9 +1,38 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-  background-color: #FDF6EA !important;
+  background-color: black !important;
 }
 
-h1 {
-  color:red;
+#logo {
+  float: left;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#home-container{
+  margin-top:25px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+
 }
