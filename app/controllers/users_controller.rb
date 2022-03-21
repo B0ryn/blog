@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def show
+    @list_of_articles = @user.articles
+  end
+
   def new
     @user = User.new
   end
@@ -26,6 +30,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+
   end
 
   private
