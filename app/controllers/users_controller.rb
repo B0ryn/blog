@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @list_of_articles = @user.articles
   end
 
+  def index
+    @list_of_users = User.all
+  end
+
   def new
     @user = User.new
   end
