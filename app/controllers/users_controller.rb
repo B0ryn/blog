@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(set_params)
       flash[:notice] = "#{@user.username} was updated successfully."
-      redirect_to articles_path
+      redirect_to @user
     else
       render 'edit'
     end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "#{@user.username} was created successfully."
-      redirect_to articles_path
+      redirect_to @user
     else
       render 'new'
     end
