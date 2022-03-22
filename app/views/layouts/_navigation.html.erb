@@ -19,7 +19,10 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <%= link_to 'Log in', login_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Log out', login_path, class: "btn btn-outline-danger my-2 my-sm-0 ml-2", method: :delete %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
