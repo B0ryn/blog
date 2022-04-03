@@ -4,11 +4,11 @@ class UsersController < ApplicationController
   before_action :require_proper_user, only: [:edit, :update, :destroy]
 
   def show
-    @list_of_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+    @list_of_articles = @user.articles.reorder("created_at DESC").paginate(page: params[:page], per_page: 5)
   end
 
   def index
-    @list_of_users = User.paginate(page: params[:page], per_page: 5)
+    @list_of_users = User.reorder("created_at DESC").paginate(page: params[:page], per_page: 5)
   end
 
   def new
